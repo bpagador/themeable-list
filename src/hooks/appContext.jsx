@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 
 
-export const ListContext = React.createContext();
+export const AppContext = React.createContext();
 
 export const useCharacters = () => {
-  const { characters } = useContext(ListContext);
+  const { characters } = useContext(AppContext);
   return characters;
 };
 
 export const useToggle = () => {
-  const { toggle } = useContext(ListContext);
+  const { toggle } = useContext(AppContext);
   return toggle;
 };

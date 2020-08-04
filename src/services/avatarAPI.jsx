@@ -1,6 +1,7 @@
 import React from 'react';
-export const fetchCharacters = () => {
-  return fetch('https://last-airbender-api.herokuapp.com/api/v1/characters')
+
+export const fetchCharacters = (page) => {
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=20&page=${page}`)
     .then(res => res.json())
     .then((characters) => characters.map(character => {
       return {
@@ -21,4 +22,4 @@ export const fetchCharacters = () => {
     }));   
 };
 
-// perPage=20?page=${page}
+// 

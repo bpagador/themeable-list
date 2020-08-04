@@ -8,6 +8,11 @@ export const useCharacters = () => {
   return state.characterList;
 };
 
+export const usePageCount = () => {
+  const { state } = useContext(AppContext);
+  return state.page;
+};
+
 export const useToggle = () => {
   const { toggle } = useContext(AppContext);
   return toggle;
